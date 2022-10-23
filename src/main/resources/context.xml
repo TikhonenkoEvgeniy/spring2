@@ -10,7 +10,7 @@
     <bean id="pet" class="com.example.spring2.introduction.Cat"/>
 
     <bean id="person" class="com.example.spring2.introduction.Person">
-        <constructor-arg ref="pet"/>
+        <property name="pet" ref="pet"/>
     </bean>
 
 </beans>
