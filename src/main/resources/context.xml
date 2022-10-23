@@ -7,10 +7,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:application.properties"/>
+
     <bean id="pet" class="com.example.spring2.introduction.Cat"/>
 
     <bean id="person" class="com.example.spring2.introduction.Person">
         <property name="pet" ref="pet"/>
+        <property name="name" value="${person.name}"/>
+        <property name="age" value="${person.age}"/>
     </bean>
 
 </beans>

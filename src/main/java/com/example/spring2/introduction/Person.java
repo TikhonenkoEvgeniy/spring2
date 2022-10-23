@@ -2,6 +2,8 @@ package com.example.spring2.introduction;
 
 public class Person {
     private Pet pet;
+    private String name;
+    private int age;
 
     public Person(Pet pet) {
         this.pet = pet;
@@ -10,6 +12,24 @@ public class Person {
 
     public Person() {
         System.out.println("Person bean is created");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+        System.out.println("Name is set");
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+        System.out.println("Age is set");
     }
 
     public void setPet(Pet pet) {
