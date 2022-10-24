@@ -9,4 +9,10 @@
 
     <bean id="pet" scope="prototype" class="com.example.spring2.introduction.Cat"/>
 
+    <bean id="dog"
+          class="com.example.spring2.introduction.Dog"
+          init-method="init"
+          destroy-method="destroy"
+          scope="prototype"/>
+
 </beans>
