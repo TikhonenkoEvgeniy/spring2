@@ -1,4 +1,4 @@
-package com.example.spring2.patterns;
+package com.example.spring2.patterns.singletone;
 
 public class Singletone {
     public static void main(String[] args) {
