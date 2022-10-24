@@ -7,6 +7,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="pet" scope="singleton" class="com.example.spring2.introduction.Cat"/>
+    <bean id="pet" scope="prototype" class="com.example.spring2.introduction.Cat"/>
 
 </beans>

@@ -8,10 +8,12 @@ public class Test4 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context2.xml");
 
         Cat myCat = context.getBean("pet", Cat.class);
+        myCat.setName("Belka");
         Cat yourCat = context.getBean("pet", Cat.class);
+        yourCat.setName("Strelka");
 
-        System.out.println(myCat);
-        System.out.println(yourCat);
+        System.out.println(myCat.getName());
+        System.out.println(yourCat.getName());
         System.out.println(myCat == yourCat);
 
         context.close();
