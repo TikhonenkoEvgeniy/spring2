@@ -3,7 +3,7 @@ package com.example.spring2.ioc_di.independently;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Suspension {
+public class Suspension implements Part {
     private String model;
     private int weight;
 

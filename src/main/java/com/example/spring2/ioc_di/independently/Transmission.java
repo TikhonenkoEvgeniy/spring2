@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-public class Transmission {
+public class Transmission implements Part {
     private String model;
     private int speeds;
 
