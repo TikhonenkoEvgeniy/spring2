@@ -7,10 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="pet" scope="prototype" class="com.example.spring2.introduction.Cat"/>
+    <bean id="pet" scope="prototype" class="com.example.spring2.ioc_di.Cat"/>
 
     <bean id="dog"
-          class="com.example.spring2.introduction.Dog"
+          class="com.example.spring2.ioc_di.Dog"
           init-method="init"
           destroy-method="destroy"
           scope="prototype"/>

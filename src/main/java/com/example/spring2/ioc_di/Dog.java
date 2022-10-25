@@ -1,4 +1,4 @@
-package com.example.spring2.introduction;
+package com.example.spring2.ioc_di;
 
 public class Dog implements Pet {
     public Dog() {
