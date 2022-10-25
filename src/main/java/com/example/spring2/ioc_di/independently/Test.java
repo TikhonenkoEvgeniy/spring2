@@ -8,6 +8,11 @@ public class Test {
 
         Car car = context.getBean("car", Car.class);
         car.check();
+
+
+        Truck truck = context.getBean("truck", Truck.class);
+        truck.check();
+
         context.close();
     }
 }
