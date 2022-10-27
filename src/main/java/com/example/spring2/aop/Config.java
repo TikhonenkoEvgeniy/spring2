@@ -10,9 +10,12 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class Config {
 
     @Bean
-    public Library libraryBean() {
-        return new Library();
+    public UniLibrary uniLibraryBean() {
+        return new UniLibrary();
     }
+
+    @Bean
+    public SchoolLibrary schoolLibraryBean() { return new SchoolLibrary(); }
 
     @Bean
     public LoggingAspectProcessor loggingAspectProcessorBean() { return new LoggingAspectProcessor(); }

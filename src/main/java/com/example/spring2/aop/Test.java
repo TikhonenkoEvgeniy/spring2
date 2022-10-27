@@ -7,8 +7,13 @@ public class Test {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
-        Library library = context.getBean("libraryBean", Library.class);
-        library.getBook();
+        UniLibrary uniLibrary = context.getBean("uniLibraryBean", UniLibrary.class);
+        SchoolLibrary schoolLibrary = context.getBean("schoolLibraryBean", SchoolLibrary.class);
+
+        uniLibrary.getBook();
+        uniLibrary.returnBook();
+        schoolLibrary.getBook();
+        uniLibrary.getMagazine();
 
         context.close();
     }
