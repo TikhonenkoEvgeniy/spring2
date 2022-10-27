@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspectProcessor {
 
-    @Before("execution(void get*())")  // Pointcut
+    @Before("execution(void get*(..))")  // Pointcut
     public void beforeAddBookAdvice() {
         System.out.println("Trying get the book");
     }

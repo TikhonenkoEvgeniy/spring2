@@ -18,5 +18,8 @@ public class Config {
     public SchoolLibrary schoolLibraryBean() { return new SchoolLibrary(); }
 
     @Bean
+    public Book bookBean() { return new Book(); }
+
+    @Bean
     public LoggingAspectProcessor loggingAspectProcessorBean() { return new LoggingAspectProcessor(); }
 }
