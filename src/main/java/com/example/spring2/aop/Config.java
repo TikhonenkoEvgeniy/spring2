@@ -1,6 +1,8 @@
 package com.example.spring2.aop;
 
+import com.example.spring2.aop.aspects.ExceptionHandlingAspect;
 import com.example.spring2.aop.aspects.LoggingAspectProcessor;
+import com.example.spring2.aop.aspects.SecurityAspectProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -22,4 +24,10 @@ public class Config {
 
     @Bean
     public LoggingAspectProcessor loggingAspectProcessorBean() { return new LoggingAspectProcessor(); }
+
+    @Bean
+    public SecurityAspectProcessor securityAspectProcessorBean() { return new SecurityAspectProcessor(); }
+
+    @Bean
+    public ExceptionHandlingAspect exceptionHandlingAspectBean() { return new ExceptionHandlingAspect(); }
 }

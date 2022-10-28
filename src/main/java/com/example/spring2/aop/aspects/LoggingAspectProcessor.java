@@ -3,15 +3,17 @@ package com.example.spring2.aop.aspects;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Order(100)
 public class LoggingAspectProcessor {
 
-//    @Before("com.example.spring2.aop.aspects.Pointcuts.allGetMethods()")  // Pointcut
-//    public void beforeGetLoggingAdvice() { System.out.println("Logging: Trying to get the book or the magazine"); }
-//
+    @Before("com.example.spring2.aop.aspects.Pointcuts.allGetMethods()")  // Pointcut
+    public void beforeGetLoggingAdvice() { System.out.println("Logging: Trying to get the book or the magazine"); }
+
 //    @Before("com.example.spring2.aop.aspects.Pointcuts.allGetMethods()")  // Pointcut 2
 //    public void beforeGetSecurityAdvice() { System.out.println("Logging: Security is processing"); }
 
@@ -30,9 +32,9 @@ public class LoggingAspectProcessor {
 //        System.out.println("beforeGetAndReturnLoggingAdvice: writing log #3");
 //    }
 
-    @Before("com.example.spring2.aop.aspects.Pointcuts.allExceptReturnMagazineFromUniLibrary()")
-    public void beforeAllExceptMagazineLoggingAdvice() {
-        System.out.println("beforeAllExceptMagazineLoggingAdvice: writing log #4");
-    }
+//    @Before("com.example.spring2.aop.aspects.Pointcuts.allExceptReturnMagazineFromUniLibrary()")
+//    public void beforeAllExceptMagazineLoggingAdvice() {
+//        System.out.println("beforeAllExceptMagazineLoggingAdvice: writing log #4");
+//    }
 
 }
