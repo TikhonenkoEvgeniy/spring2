@@ -8,13 +8,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspectProcessor {
 
-    @Before("execution(void get*(..))")  // Pointcut
-    public void beforeAddBookAdvice() {
-        System.out.println("Trying get the book");
-    }
+    @Before("com.example.spring2.aop.aspects.Pointcuts.allGetMethods()")  // Pointcut
+    public void beforeGetLoggingAdvice() { System.out.println("Logging: Trying to get the book or the magazine"); }
 
-    @Before("execution(* get*())")  // Pointcut
-    public void beforeReturnBook() {
-        System.out.println("Trying return the book");
-    }
+    @Before("com.example.spring2.aop.aspects.Pointcuts.allGetMethods()")  // Pointcut 2
+    public void beforeGetSecurityAdvice() { System.out.println("Logging: Security is processing"); }
 }
