@@ -15,4 +15,13 @@ public class Pointcuts {
 
     @Pointcut("allGetFromUniLibrary() || allReturnFromLibrary()")
     protected void allGetAndReturnFromUniLibrary() {}
+
+    @Pointcut("execution(* com.example.spring2.aop.UniLibrary.*(..))")
+    protected void allFromUniLibrary() {}
+
+    @Pointcut("execution(void com.example.spring2.aop.UniLibrary.returnMagazine())")
+    protected void returnMagazineFromUniLibrary() {}
+
+    @Pointcut("allFromUniLibrary() && !returnMagazineFromUniLibrary()")
+    protected void allExceptReturnMagazineFromUniLibrary() {}
 }
