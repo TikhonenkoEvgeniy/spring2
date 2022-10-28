@@ -3,6 +3,7 @@ package com.example.spring2.aop;
 import com.example.spring2.aop.aspects.ExceptionHandlingAspect;
 import com.example.spring2.aop.aspects.LoggingAspectProcessor;
 import com.example.spring2.aop.aspects.SecurityAspectProcessor;
+import com.example.spring2.aop.aspects.UniversityLoggingAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -30,4 +31,10 @@ public class Config {
 
     @Bean
     public ExceptionHandlingAspect exceptionHandlingAspectBean() { return new ExceptionHandlingAspect(); }
+
+    @Bean
+    public UniversityLoggingAspect universityLoggingAspectBean() { return new UniversityLoggingAspect(); }
+
+    @Bean
+    public University universityBean() { return new University(); }
 }
