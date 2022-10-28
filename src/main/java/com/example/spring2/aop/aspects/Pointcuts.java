@@ -7,6 +7,9 @@ public class Pointcuts {
     @Pointcut("execution(* get*())")
     protected void allGetMethods() {}
 
+    @Pointcut("execution(* add*(..))")
+    protected void allAddMethods() {}
+
     @Pointcut("execution(* com.example.spring2.aop.UniLibrary.get*())")
     protected void allGetFromUniLibrary() {}
 
