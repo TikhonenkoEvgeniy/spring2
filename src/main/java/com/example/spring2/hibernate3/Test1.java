@@ -17,11 +17,13 @@ public class Test1 {
                 .buildSessionFactory();
         Session session = null;
 
-//        Department department = new Department("IT", 1200, 300);
-//        Employee emp1 = new Employee("Evgeniy", "Tikhonenko", 500);
-//        Employee emp2 = new Employee("Elena", "Smirnova", 600);
-//        department.addEmployeeToDepartment(emp1);
-//        department.addEmployeeToDepartment(emp2);
+        Department department = new Department("IT", 1200, 300);
+        Employee emp1 = new Employee("Evgeniy", "Tikhonenko", 500);
+        Employee emp2 = new Employee("Elena", "Smirnova", 600);
+        Employee emp3 = new Employee("Anton", "Sidorov", 650);
+        department.addEmployeeToDepartment(emp1);
+        department.addEmployeeToDepartment(emp2);
+        department.addEmployeeToDepartment(emp3);
 
         try {
 //            session = factory.getCurrentSession();
@@ -33,7 +35,9 @@ public class Test1 {
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            Department department = session.get(Department.class, 1);
+            session.save(department);
+
+//            Department department = session.get(Department.class, 1);
             System.out.println(department);
             System.out.println(department.getEmployees());
 
